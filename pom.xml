@@ -14,6 +14,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>forum</name>
 	<description>Demo project for Spring Boot</description>
+	<!-- server para mudar de jar para war o packaging -->
+	<packaging>war</packaging> 
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -23,6 +25,13 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- serve para colocar como provided o tomcat -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
@@ -93,6 +102,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>forum</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
